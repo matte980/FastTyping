@@ -54,7 +54,8 @@ def changeWord():
     global wIndex, goodW, badW, wrong, actIndex
     if sv.get()[:-1]==words[wIndex-3]:
         goodW += 1
-    elif len(words[wIndex-3])>len(sv.get()[:-1]):
+    else:
+    # elif len(words[wIndex-3])>len(sv.get()[:-1]):
     # wIndex!=-1 and 
         badW += 1
         wrong += len(words[wIndex-3])-len(sv.get()[:-1])
