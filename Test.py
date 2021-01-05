@@ -1,16 +1,19 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-s
 
 import tkinter as tk
 from tkinter.font import Font
 from random import shuffle
 import sys, os
 
+GENTIME = 30
+
 wrong = 0
 right = 0
 percent = 0
 prevLen = 0
-secForSpeed = 30
-sec = 30
+secForSpeed = GENTIME
+sec = GENTIME
 goodW = 0
 badW = 0
 timeStarted = False
@@ -158,7 +161,7 @@ def timeEnded():
             else:
                 second_max.append(n)
     if not all(v == 0 for v in second_max):
-        print('Queste sono le seconde lettere che hai sbagliato di più')
+        # print('Queste sono le seconde lettere che hai sbagliato di più')
         for i, n in enumerate(second_max):
             if n == max(second_max) and n != 0:
                 secondLettersStr += chr(i+97) + ':' + str(n) + ', '
